@@ -17,7 +17,7 @@ public class MenuDrivenProgram {
 		System.out.println("4. Check if book with given isbn is in list or not");
 		System.out.println("5. Delete all books in list");
 		System.out.println("6. Display number of books in list");
-		System.out.println("7. Display number of books in list");
+		System.out.println("7. Sort all books by price in desc order");
 		System.out.println("****************************************************");
 		System.out.println("Enter your choice");
 		choice=sc.nextInt();

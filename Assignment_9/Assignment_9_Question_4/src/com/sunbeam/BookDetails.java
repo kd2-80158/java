@@ -36,7 +36,6 @@ public class BookDetails {
 		this("",0,"",0);
 	}
 	public BookDetails(String isbn, double price, String authorName, int quantity) {
-		super();
 		this.isbn = isbn;
 		this.price = price;
 		this.authorName = authorName;
@@ -65,15 +64,18 @@ public class BookDetails {
 
 	}
 	public boolean equals(Object obj)
-	{
-		if(obj instanceof BookDetails)
 		{
-		BookDetails other = (BookDetails) obj;
-		if(this.isbn.equals(other.isbn))
-		   return true;
-	    }
-		return false;
-		
+			if(obj==null)
+				return false;
+			if(this==obj)
+				return true;
+			if(obj instanceof BookDetails)
+			{
+			BookDetails other = (BookDetails) obj;
+			if(this.isbn.equals(other.isbn))
+			   return true;
+			}
+			return false;	
 	}
 	
 
