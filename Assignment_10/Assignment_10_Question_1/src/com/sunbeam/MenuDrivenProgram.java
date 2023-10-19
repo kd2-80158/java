@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 public class MenuDrivenProgram {
 	
@@ -68,11 +69,17 @@ public class MenuDrivenProgram {
 			}
 			break;
 			case 2:
-               Collections.shuffle(bd);
-               for(BookDetails book:bd)
-               {
-            	   book.display();
-               }
+//               Collections.shuffle(bd);
+//               for(BookDetails book:bd)
+//               {
+//            	   book.display();
+//               }
+				 Iterator<BookDetails> itr=bd.iterator();
+				 while(itr.hasNext())
+				 {
+					 BookDetails e= itr.next();
+					 System.out.println(e.toString());
+				 }
 			case 3:
 				System.out.println("Enter ISBN to search: ");  
 				String isbn3=sc.next();

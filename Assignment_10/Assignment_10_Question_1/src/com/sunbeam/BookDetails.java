@@ -63,6 +63,12 @@ public class BookDetails {
 		System.out.println("Quantity: "+quantity);
 
 	}
+	
+	@Override
+	public String toString() {
+		return "BookDetails [isbn=" + isbn + ", price=" + price + ", authorName=" + authorName + ", quantity="
+				+ quantity + "]";
+	}
 	public boolean equals(Object obj)
 	{
 		if(obj==null)
